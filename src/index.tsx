@@ -1,15 +1,15 @@
 import React from 'react';
-import {App} from 'App';
+import { App } from 'App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux';
-import {createRoot} from "react-dom/client";
-import { RootStateOrAny } from 'store';
+import { Provider } from 'react-redux';
+import { createRoot } from "react-dom/client";
+import { store } from 'store';
 
 const container = document.getElementById('root') as HTMLElement
 const root = createRoot(container);
 root.render(
-    <Provider store={{} as RootStateOrAny }>
-        <App/>
+    <Provider store={store}>
+        <App />
     </Provider>
 );
 
